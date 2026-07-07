@@ -3,7 +3,7 @@
 <p align="center">
   <img src="Screenshots/Project_Thumbnail.png" alt="HR Analytics SQL Project" width="100%">
 </p>
-##  Project Overview
+## 📌 Project Overview
 
 This project demonstrates an end-to-end HR Analytics workflow using MySQL. The primary objective was to transform raw HR data into a clean, analysis-ready dataset and answer key business questions using SQL.
 
@@ -78,6 +78,57 @@ During this project, the following SQL concepts were applied:
 - ROUND()
 - Data Cleaning Techniques
 - Exploratory Data Analysis (EDA)
-- 
+
+  ## 📊 Business Questions Solved
+
+The following business questions were answered using SQL after completing the data cleaning process.
+
+1. What is the total number of employees in the organization?
+2. What is the distribution of employees based on employment status?
+3. How are employees distributed across different departments?
+4. What is the employee distribution by business unit?
+5. What is the distribution of employees by employment type?
+6. Which departments have the highest average employee performance ratings?
+7. Which training programs have the highest employee participation?
+8. What percentage of employees achieved each training outcome?
+9. What is the gender distribution across the organization?
+10. Which departments have the highest employee satisfaction scores?
+11. Which departments have the highest employee engagement and performance?
+12. Which departments have the highest employee attrition rate?
+13. How effective are training programs in improving employee performance?
+14. Which departments provide the best overall employee experience?
+15. What are the overall HR performance metrics of the organization?
+
+📄 **Complete SQL queries and business analysis are available in the SQL folder.**
+
+## 📁 Repository Structure
+
+```text
+HR-Analytics-SQL-Project
+│
+├── Data
+│   ├── HR_Raw_Data.csv
+│   └── HR_Clean_Data.csv
+│
+├── SQL
+│   ├── HR_SQL_Script.sql
+│   └── HR_Business_Analysis.sql
+│
+├── Documentation
+│   └── HR_Analytics_Project_Details.pdf
+│
+├── Screenshots
+│   ├── Project_Thumbnail.png
+│   ├── Raw_Dataset.png
+│   ├── Column_Renaming.png
+│   ├── Create_Staging_Table.png
+│   ├── Duplicate_Check.png
+│   ├── Clean_Dataset.png
+│   └── Final_Business_Analysis.png
+│
+└── README.md
+```
+
+
 
 
