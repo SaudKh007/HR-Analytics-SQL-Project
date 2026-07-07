@@ -128,7 +128,93 @@ HR-Analytics-SQL-Project
 │
 └── README.md
 ```
+## 📸 Project Screenshots
 
+### 1️⃣ Raw Dataset
+
+![Raw Dataset](Screenshots/row_data.png)
+
+---
+
+### 2️⃣ Column Renaming
+
+![Column Renaming](Screenshots/Column_Renaming.png)
+
+---
+
+### 3️⃣ Creating Staging Table
+
+![Creating Staging Table](Screenshots/create%20hr_staging2.png)
+
+---
+
+### 4️⃣ Duplicate Detection
+
+![Duplicate Detection](Screenshots/check_duplicate.png)
+
+---
+
+### 5️⃣ Removing Duplicate Records
+
+![Removing Duplicate Records](Screenshots/delete_duplicate.png)
+
+---
+
+### 6️⃣ Final Clean Dataset
+
+![Final Clean Dataset](Screenshots/clean_data.png)
+
+---
+
+### 7️⃣ KPI & Business Analysis Queries
+
+![KPI Query](Screenshots/kpi%20query.png)
+
+## 💡 Key Business Insights
+
+Based on the HR data analysis, the following business insights were identified:
+
+- The organization consists of **3,000 employees** across multiple departments.
+- The majority of employees are **Active**, indicating a stable workforce.
+- The **Production Department** has the highest employee count.
+- Employees are distributed evenly across Business Units.
+- Full-Time employees represent the largest workforce segment.
+- Department performance and satisfaction were ranked using SQL Window Functions.
+- Training effectiveness was analyzed using employee performance, engagement, and satisfaction metrics.
+- Employee attrition analysis identified departments with higher turnover risk.
+- An Employee Experience Score was developed by combining satisfaction, engagement, work-life balance, and performance ratings.
+- Company-wide HR KPIs were summarized to support management decision-making.
+
+- ## 🚀 Skills Demonstrated
+
+Throughout this project, I applied the following skills:
+
+- SQL Data Cleaning
+- Data Validation
+- Exploratory Data Analysis (EDA)
+- Common Table Expressions (CTEs)
+- Window Functions
+- Aggregate Functions
+- CASE Statements
+- Business KPI Analysis
+- HR Data Analytics
+- Business Reporting
+- GitHub Project Documentation
+
+- ## 👨‍💻 Author
+
+**Mohd Saud Khan**
+
+Aspiring Data Analyst passionate about transforming raw data into meaningful business insights using SQL, Excel, Power BI, and Python.
+
+### Connect with Me
+
+- 💼 LinkedIn: *(Add your LinkedIn profile link)*
+- 🐙 GitHub: *(Add your GitHub profile link)*
+
+---
+
+⭐ **If you found this project useful, consider giving it a Star!**
 
 
 
