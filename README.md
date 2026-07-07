@@ -209,8 +209,8 @@ Aspiring Data Analyst passionate about transforming raw data into meaningful bus
 
 ### Connect with Me
 
-- 💼 LinkedIn: *(Add your LinkedIn profile link)*
-- 🐙 GitHub: *(Add your GitHub profile link)*
+- 💼 LinkedIn: *(https://www.linkedin.com/in/mohd-saud-khan-05751b35a/)*
+- 🐙 GitHub: *(https://github.com/SaudKh007)*
 
 ---
 
