@@ -79,6 +79,20 @@ During this project, the following SQL concepts were applied:
 - Data Cleaning Techniques
 - Exploratory Data Analysis (EDA)
 
+- ## Data Quality Observations
+
+- ## Data Quality Observations
+
+During data validation, an inconsistency was identified between the **Employee Status**, **Exit Date**, and **Termination Type** columns.
+
+Examples of the observed issue:
+- Exit Date was available while Employee Status was marked as **Active**.
+- Some employees had a **Termination Type** (e.g., Resignation, Retirement, Voluntary, or Involuntary) but their Employee Status was still **Active**.
+
+After investigation, these records were intentionally left unchanged because the original dataset did not include business rules defining the relationship between these fields. Updating the values would have required unsupported assumptions, which could compromise the integrity of the original data.
+
+Instead of modifying the source data, the inconsistency was documented as a **Data Quality Observation**, following professional data validation practices.
+
   ## 📊 Business Questions Solved
 
 The following business questions were answered using SQL after completing the data cleaning process.
