@@ -79,7 +79,7 @@ During this project, the following SQL concepts were applied:
 - Data Cleaning Techniques
 - Exploratory Data Analysis (EDA)
 
-- ## Data Quality Observations
+  
 
 - ## Data Quality Observations
 
