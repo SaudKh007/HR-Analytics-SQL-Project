@@ -26,13 +26,12 @@
 
 9. Which departments have the highest employee engagement scores and employee performance?
 
-10. Which departments have the highest employee attrition rate, and how can they be classified into High, Medium, and Low attrition risk?
 
-11. How effective are training programs in improving employee performance, employee engagement, and employee satisfaction?
+10. How effective are training programs in improving employee performance, employee engagement, and employee satisfaction?
 
-12. Which department provides the best overall employee experience based on satisfaction, engagement, work-life balance, and employee performance?
+11. Which department provides the best overall employee experience based on satisfaction, engagement, work-life balance, and employee performance?
 
-13. What are the overall HR performance indicators of the organization, including workforce size, attrition rate, employee performance, satisfaction, engagement, work-life balance, best-performing department, highest satisfaction department, and most popular training program?
+12. What are the overall HR performance indicators of the organization, including workforce size, attrition rate, employee performance, satisfaction, engagement, work-life balance, best-performing department, highest satisfaction department, and most popular training program?
 --------------------------------------------------------------------------------
 
 # Business Question 1 – Total Employees
@@ -427,71 +426,9 @@ Sales employees reported the highest engagement levels, while Admin Offices had 
 
 --------------------------------------------------------------------------------
 
-# Business Question 10 – Department-wise Attrition Analysis
 
-### Business Question
 
-Which departments have the highest employee attrition rate?
-
-### SQL Query
-
-```sql
-WITH attrition_analysis AS (
-    SELECT
-        department_type,
-        COUNT(DISTINCT employee_id) AS total_employees,
-        SUM(CASE
-                WHEN employee_status='Active'
-                THEN 1 ELSE 0
-            END) AS active_employees,
-        SUM(CASE
-                WHEN employee_status IN
-                ('Voluntarily Terminated',
-                 'Terminated for Cause')
-                THEN 1 ELSE 0
-            END) AS terminated_employees
-    FROM hr_staging2
-    GROUP BY department_type
-)
-
-SELECT
-    department_type,
-    total_employees,
-    active_employees,
-    terminated_employees,
-    ROUND(
-        terminated_employees*100.0/
-        total_employees,
-        2
-    ) AS attrition_rate,
-    DENSE_RANK() OVER(
-        ORDER BY terminated_employees*100.0/
-        total_employees DESC
-    ) AS attrition_rank
-FROM attrition_analysis
-ORDER BY attrition_rank;
-```
-
-### Result
-
-+-------------------------+------------------+------------------+-----------------------+----------------+----------------+
-| department_type         | total_employees  | active_employees | terminated_employees  | attrition_rate | attrition_rank |
-+-------------------------+------------------+------------------+-----------------------+----------------+----------------+
-| Admin Offices           | 80               | 58               | 22                    | 27.50          | 1              |
-| Executive Office        | 24               | 18               | 6                     | 25.00          | 2              |
-| Sales                   | 331              | 266              | 65                    | 19.64          | 3              |
-| IT/IS                   | 430              | 350              | 80                    | 18.60          | 4              |
-| Software Engineering    | 115              | 95               | 20                    | 17.39          | 5              |
-| Production              | 2020             | 1671             | 349                   | 17.28          | 6              |
-+-------------------------+------------------+------------------+-----------------------+----------------+----------------+
-
-### Business Insight
-
-Admin Offices recorded the highest attrition rate, indicating that this department may require immediate attention regarding employee retention strategies.
-
---------------------------------------------------------------------------------
-
-# Business Question 11 – Training Effectiveness Analysis
+# Business Question 10 – Training Effectiveness Analysis
 
 ### Business Question
 
@@ -543,7 +480,7 @@ Employees who successfully passed training programs achieved the highest average
 
 --------------------------------------------------------------------------------
 
-# Business Question 12 – Employee Experience Score
+# Business Question 11 – Employee Experience Score
 
 ### Business Question
 
@@ -575,7 +512,7 @@ Sales provides the strongest overall employee experience by combining high satis
 
 --------------------------------------------------------------------------------
 
-# Business Question 13 – Executive HR Dashboard Summary
+# Business Question 12– Executive HR Dashboard Summary
 
 ### Business Question
 
