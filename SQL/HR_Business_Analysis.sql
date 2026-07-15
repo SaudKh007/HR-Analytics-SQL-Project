@@ -6,101 +6,42 @@
 
 ## Business Questions
 
-1. How many employees are currently working in the organization?
 
-2. What is the distribution of employees based on their employment status?
 
-3. How many employees are working in each department?
+1. How many employees are working in each department?
 
-4. How are employees distributed across different business units?
+2. How are employees distributed across different business units?
 
-5. How many employees belong to each employment type?
+3. How many employees belong to each employment type?
 
-6. Which departments have the highest average employee performance rating?
+4. Which departments have the highest average employee performance rating?
 
-7. Which training programs have the highest employee participation?
+5. Which training programs have the highest employee participation?
 
-8. What are the outcomes of employee training programs?
+6. What are the outcomes of employee training programs?
 
-9. What is the gender distribution of employees across the organization?
+7. What is the gender distribution of employees across the organization?
 
-10. Which departments have the highest employee satisfaction scores?
+8. Which departments have the highest employee satisfaction scores?
 
-11. Which departments have the highest employee engagement scores and employee performance?
+9. Which departments have the highest employee engagement scores and employee performance?
 
-12. Which departments have the highest employee attrition rate, and how can they be classified into High, Medium, and Low attrition risk?
+10. Which departments have the highest employee attrition rate, and how can they be classified into High, Medium, and Low attrition risk?
 
-13. How effective are training programs in improving employee performance, employee engagement, and employee satisfaction?
+11. How effective are training programs in improving employee performance, employee engagement, and employee satisfaction?
 
-14. Which department provides the best overall employee experience based on satisfaction, engagement, work-life balance, and employee performance?
+12. Which department provides the best overall employee experience based on satisfaction, engagement, work-life balance, and employee performance?
 
-15. What are the overall HR performance indicators of the organization, including workforce size, attrition rate, employee performance, satisfaction, engagement, work-life balance, best-performing department, highest satisfaction department, and most popular training program?
+13. What are the overall HR performance indicators of the organization, including workforce size, attrition rate, employee performance, satisfaction, engagement, work-life balance, best-performing department, highest satisfaction department, and most popular training program?
 --------------------------------------------------------------------------------
 
 # Business Question 1 – Total Employees
 
 ### Business Question
 
-How many employees are currently working in the organization?
 
-### SQL Query
 
-```sql
-SELECT
-    COUNT(DISTINCT employee_id) AS total_employees
-FROM hr_staging2;
-```
-
-### Result
-
-+----------------------+
-| total_employees      |
-+----------------------+
-| 3000                 |
-+----------------------+
-
-### Business Insight
-
-The organization currently has **3,000 employees**. This metric provides the baseline for workforce planning and supports all subsequent HR analytics.
-
---------------------------------------------------------------------------------
-
-# Business Question 2 – Employee Status Distribution
-
-### Business Question
-
-What is the distribution of employees based on their employment status?
-
-### SQL Query
-
-```sql
-SELECT
-    employee_status,
-    COUNT(DISTINCT employee_id) AS total_employees
-FROM hr_staging2
-GROUP BY employee_status
-ORDER BY total_employees DESC;
-```
-
-### Result
-
-+---------------------------+------------------+
-| employee_status           | total_employees  |
-+---------------------------+------------------+
-| Active                    | 2458             |
-| Voluntarily Terminated    | 321              |
-| Leave of Absence          | 86               |
-| Future Start              | 69               |
-| Terminated for Cause      | 66               |
-+---------------------------+------------------+
-
-### Business Insight
-
-Most employees are currently **Active**, indicating a stable workforce. The remaining categories help HR monitor employee turnover and workforce availability.
-
---------------------------------------------------------------------------------
-
-# Business Question 3 – Department-wise Employee Distribution
+# Business Question 1 – Department-wise Employee Distribution
 
 ### Business Question
 
@@ -136,7 +77,7 @@ The **Production** department has the largest workforce, while the **Executive O
 
 --------------------------------------------------------------------------------
 
-# Business Question 4 – Business Unit Distribution
+# Business Question 2 – Business Unit Distribution
 
 ### Business Question
 
@@ -176,7 +117,7 @@ Employees are distributed fairly evenly across business units, indicating balanc
 
 --------------------------------------------------------------------------------
 
-# Business Question 5 – Employee Type Distribution
+# Business Question 3– Employee Type Distribution
 
 ### Business Question
 
@@ -210,7 +151,7 @@ The organization maintains a balanced workforce consisting of **Full-Time**, **C
 
 --------------------------------------------------------------------------------
 
-# Business Question 6 – Department Performance Ranking
+# Business Question 4 – Department Performance Ranking
 
 ### Business Question
 
@@ -256,7 +197,7 @@ The Sales department achieved the highest average employee performance rating, w
 
 --------------------------------------------------------------------------------
 
-# Business Question 7 – Training Program Popularity
+# Business Question 5– Training Program Popularity
 
 ### Business Question
 
@@ -300,7 +241,7 @@ Communication Skills is the most popular training program, indicating strong emp
 
 --------------------------------------------------------------------------------
 
-# Business Question 8 – Training Outcome Analysis
+# Business Question 6– Training Outcome Analysis
 
 ### Business Question
 
@@ -347,7 +288,7 @@ Training outcomes are fairly balanced across all categories. HR should investiga
 
 --------------------------------------------------------------------------------
 
-# Business Question 9 – Gender Distribution
+# Business Question 7– Gender Distribution
 
 ### Business Question
 
@@ -391,7 +332,7 @@ The workforce is well balanced in terms of gender representation, with Female em
 
 --------------------------------------------------------------------------------
 
-# Business Question 10 – Department Satisfaction Analysis
+# Business Question 8 – Department Satisfaction Analysis
 
 ### Business Question
 
@@ -438,7 +379,7 @@ Executive Office reported the highest employee satisfaction score, while Product
 
 --------------------------------------------------------------------------------
 
-# Business Question 11 – Employee Engagement Analysis
+# Business Question 9 – Employee Engagement Analysis
 
 ### Business Question
 
@@ -486,7 +427,7 @@ Sales employees reported the highest engagement levels, while Admin Offices had 
 
 --------------------------------------------------------------------------------
 
-# Business Question 12 – Department-wise Attrition Analysis
+# Business Question 10 – Department-wise Attrition Analysis
 
 ### Business Question
 
@@ -550,7 +491,7 @@ Admin Offices recorded the highest attrition rate, indicating that this departme
 
 --------------------------------------------------------------------------------
 
-# Business Question 13 – Training Effectiveness Analysis
+# Business Question 11 – Training Effectiveness Analysis
 
 ### Business Question
 
@@ -602,7 +543,7 @@ Employees who successfully passed training programs achieved the highest average
 
 --------------------------------------------------------------------------------
 
-# Business Question 14 – Employee Experience Score
+# Business Question 12 – Employee Experience Score
 
 ### Business Question
 
@@ -634,7 +575,7 @@ Sales provides the strongest overall employee experience by combining high satis
 
 --------------------------------------------------------------------------------
 
-# Business Question 15 – Executive HR Dashboard Summary
+# Business Question 13 – Executive HR Dashboard Summary
 
 ### Business Question
 
